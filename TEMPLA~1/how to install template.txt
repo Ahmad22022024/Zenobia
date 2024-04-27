@@ -1,0 +1,2 @@
+1. before upload new update choose in settings/template kizi, we suppport only kizi template from version 5.0 up
+2.extract this KIZI zip in template folder and name folder "kizi" https://prnt.sc/2OzsptNaQmRe

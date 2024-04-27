@@ -1,0 +1,25 @@
+---BEFORE UPDATE DO BACKUP TO YOUR FULL WEBSITE --- Any bugs you find in latest version write us at email mentolatux@gamemonetize.com ---
+
+https://gamemonetize.com/blog/how-to-install-free-website-gaming-arcade-cms-gamemonetize-com
+https://gamemonetize.com/blog/how-to-update-arcade-cms-from-lower-version-to-latest-version
+
+v5.0.3 - fixed category link that show in google search console
+v5.0.2 - fixed .io, .io games tag for canonical tag
+v5.0.0 - WalkThrough, Blog, Youtube Hover icon, Tags, Description Footer all Page, SEO Title-Meta Description, Similar Games Left and right by game name, Fixed some bugs
+v4.0.0 - sitemap.xml, feed, new box admin edit game, can publish 1 game, support PHP up to 8.2.
+
+
+-SOME TUTORIAL SEO---
+- when publish 100 games go to generate sitemap, when push button "Generate Sitemap" just wait untill refresh admin page or else will geretate duplicate sitemap
+- if you plan to publish all games make sure you will rewrite all description for google SEO to rank UP
+- we aded links inside each description game to integrate in your description
+- we recommend daily to publish 7 to 15 games and all games description must be rewrited or no chance to rank in google
+- publish daily games
+- Walkthrough is automatic added to each game so you not need to do nothing
+- each page have option to make description, we recommend to write all page in admin for seo and rank up, adding also internal link ad keywords in all description
+- every time when publish 1 game rewrite and then submit to google search console, when your website get indexed by google automatic you not need to submit game link manual
+- we have added BLOG
+
+
+
+--------------CMS VESRION 6.0 IS NOW ON WORK :) ---------------

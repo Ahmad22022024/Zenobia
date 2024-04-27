@@ -1,0 +1,65 @@
+------Before update this query make backup of your database---------
+------ add 1 by 1 in SQL https://prnt.sc/aKHle3lJDVv- AND click GO -------
+
+
+CREATE TABLE IF NOT EXISTS `gm_tags` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `footer_description` text DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `url` (`url`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE IF NOT EXISTS `gm_footer_description` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_name` varchar(100) NOT NULL,
+  `page_url` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `has_content` enum('1','0') NOT NULL DEFAULT '0',
+  `content_value` text DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO gm_footer_description (page_name, page_url, description, has_content, content_value) VALUES
+    ('home', '/', '', '0', ''),
+    ('best games', '/best-games', '', '0', ''),
+    ('new games', '/new-games', '', '0', ''),
+    ('featured games', '/featured-games', '', '0', ''),
+    ('played games', '/played-games', '', '0', ''),
+    ('about', '/about', '', '1', ''),
+    ('terms', '/terms', '', '1', ''),
+    ('contact', '/contact', '', '1', ''),
+    ('privacy', '/privacy', '', '0', ''),
+    ('search', '/search', '', '0', ''),
+    ('categories', '/categories', '', '0', '');
+INSERT INTO gm_footer_description (page_name, page_url, description, has_content, content_value) VALUES
+    ('blogs', '/blogs', '', '0', '');
+
+
+CREATE TABLE `gm_blogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `url` varchar(100) NOT NULL,
+  `image_url` varchar(200) DEFAULT NULL,
+  `post` text DEFAULT NULL,
+  `date_created` date NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+ALTER TABLE `gm_categories` ADD `footer_description` TEXT NULL DEFAULT '' AFTER `image`;
+
+
+ALTER TABLE `gm_games` ADD `tags_ids` JSON NULL DEFAULT NULL AFTER `field_10`;
+
+
+ALTER TABLE `gm_games` ADD `video_url` VARCHAR(100) NULL DEFAULT NULL AFTER `tags_ids`;
+
+
+ALTER TABLE `gm_setting` ADD `custom_game_feed_url` VARCHAR(1000) NULL DEFAULT NULL AFTER `plays`;
+
+
+UPDATE gm_setting SET custom_game_feed_url = 'https://gamemonetize.com/feed.php?format=0&num=30' WHERE gm_setting.id = 1;
